@@ -1,4 +1,3 @@
-const tabs = document.querySelectorAll(".tab");
 const nextBtns = document.querySelectorAll(".next-btn");
 const unlockGiftBtn = document.querySelector(".unlock-gift");
 
@@ -41,4 +40,5 @@ function toggleTabs() {
 
 	currentTab.setAttribute("data-tab-active", false);
 	nextTab.setAttribute("data-tab-active", true);
+	currentTabIndex = Number(nextTab.dataset.tabIndex);
 }

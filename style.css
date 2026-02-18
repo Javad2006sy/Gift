@@ -17,6 +17,7 @@ body {
 
 h3 {
 	font-size: 1.5rem;
+	text-align: center;
 }
 
 p {
@@ -73,6 +74,7 @@ img {
 
 .gift-box {
 	transition: transform 0.6s ease;
+	position: static;
 }
 
 .gift-box[data-hidden="true"] {
