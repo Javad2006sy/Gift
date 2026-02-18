@@ -3,3 +3,53 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+@font-face {
+	src: url("./assets/fonts/estedad.woff2") format("woff2");
+	font-family: "Estedad";
+	font-weight: 500;
+	font-style: normal;
+}
+
+body {
+	font-family: "Estedad", sans-serif;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+p {
+	text-align: center;
+	font-size: 1.1rem;
+}
+
+.tab {
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-direction: column;
+	padding: 0 15px;
+}
+
+.tab[data-tab-active="false"] {
+	display: none;
+}
+
+.btn {
+	--color: rgb(0, 168, 76);
+	font-family: inherit;
+	background-color: var(--color);
+	color: white;
+	border: none;
+	transition: opacity 0.2s ease;
+	padding: 7px 15px;
+	border-radius: 12px;
+	font-size: 0.9rem;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
