@@ -39,6 +39,10 @@ img {
 	flex-direction: column;
 }
 
+.flex-row {
+	flex-direction: row;
+}
+
 .tab {
 	height: 100dvh;
 	display: flex;
@@ -88,6 +92,34 @@ img {
 
 .gift-box[data-hidden="false"] ~ * {
 	display: none;
+}
+
+.no-btn.active {
+	position: absolute;
+}
+
+.popup {
+	position: absolute;
+	width: 95%;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 0 40px -15px gray;
+	padding: 20px;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.4s ease;
+	pointer-events: none;
+}
+
+.popup.active {
+	opacity: 1;
+	transform: none;
+	pointer-events: initial;
+}
+
+.popup video {
+	border-radius: 10px;
+	width: 100%;
 }
 
 @keyframes slideIn {

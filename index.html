@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="ltr">
+<html lang="fa" dir="rtl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="tab" data-tab-index="1" data-tab-active="true">
+		<div class="tab" data-tab-index="1" data-tab-active="false">
 			<img src="./assets/cat.jpg" alt="happy cat" style="width: 250px" />
 			<h3>با اینکه حالم ازت به هم میخوره ولی تولدت مبارک!</h3>
 			<p>برات یه کادو گرفتم. بزن صفحه بعد تا ببینی!</p>
@@ -24,7 +24,25 @@
 			<button class="btn unlock-gift">آره</button>
 		</div>
 
-		<div class="tab" data-tab-index="3" data-tab-active="false"></div>
+		<div class="tab" data-tab-index="3" data-tab-active="true">
+			<h3>از کادو خوشت اومد؟ 😊</h3>
+			<div class="flex flex-row">
+				<button class="btn no-btn" style="--color: tomato">نه</button>
+				<button class="btn next-btn">آره</button>
+			</div>
+
+			<div class="popup flex">
+				<video
+					src="./assets/cat-angry.MP4"
+					loop
+					muted
+					autoplay
+					playbackrate="2"
+				></video>
+				<h3>بزن رو آره</h3>
+				<button class="btn popup-close">باشه</button>
+			</div>
+		</div>
 
 		<script src="./main.js"></script>
 	</body>
