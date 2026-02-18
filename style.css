@@ -45,6 +45,7 @@ img {
 
 .tab {
 	height: 100dvh;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,6 +59,10 @@ img {
 	position: absolute;
 	pointer-events: none;
 	animation: slideOut 0.5s ease-out forwards;
+}
+
+.tab[data-tab-active="false"] img {
+	opacity: 0;
 }
 
 .btn {
