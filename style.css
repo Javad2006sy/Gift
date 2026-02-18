@@ -24,6 +24,20 @@ p {
 	font-size: 1.1rem;
 }
 
+img {
+	width: 350px;
+	aspect-ratio: 1/1;
+	border-radius: 5px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-direction: column;
+}
+
 .tab {
 	height: 100dvh;
 	display: flex;
@@ -32,10 +46,13 @@ p {
 	gap: 20px;
 	flex-direction: column;
 	padding: 0 15px;
+	animation: slideIn 0.5s ease-out forwards;
 }
 
 .tab[data-tab-active="false"] {
-	display: none;
+	position: absolute;
+	pointer-events: none;
+	animation: slideOut 0.5s ease-out forwards;
 }
 
 .btn {
@@ -52,4 +69,45 @@ p {
 
 .btn:hover {
 	opacity: 0.9;
+}
+
+.gift-box {
+	transition: transform 0.6s ease;
+}
+
+.gift-box[data-hidden="true"] {
+	transform: scale(0);
+	position: absolute;
+}
+
+.gift-box[data-hidden="false"] .btn {
+	animation: slideIn 0.3s ease 2s both;
+}
+
+.gift-box[data-hidden="false"] ~ * {
+	display: none;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
 }
